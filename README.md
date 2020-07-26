@@ -1,10 +1,6 @@
-
 What Does this App do?
 
 This app mimics the bit.ly.com website and creates shortened URLs for the URLS you want. The Database of users including their previous links and its results and current URLs is managed using 'LocalStorage'. No Database is used here. This app is created purely in React-JS. Limitation of 6 Shortened links per one URL request is imposed to restrict HTML DOM exploitation.
-
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
