@@ -1,0 +1,90 @@
+
+
+::placeholder
+{
+    padding-left: 10px;
+}
+
+.display-box
+{
+    font-size: $s-size;
+    word-break:break-all;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.linkgen
+{
+    background: white;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 4px;
+}
+
+.number-box
+{
+    margin: 0rem 1rem;   // vertcal, hroziontal
+    background: white;
+    width: 7rem;
+    font-size: $m-size;
+    font-weight: 600;
+    cursor: pointer;
+    color: black;
+    height: $xl-size;
+    padding-left:2px;
+    font-size: $m-size;
+}
+
+.input
+{
+    padding-right: 20px;
+    width: 38rem;
+    height: $xl-size;
+    font-size: $m-size;
+}
+.generate
+{
+    margin: 0rem 1rem;   // vertcal, hroziontal
+    border: none;
+    background: $orange;
+    box-shadow: 0 5px rgba(0,0,0,0.5);
+    width: 15rem;
+    font-size: $m-size;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    height: $xl-size;
+   
+}
+
+.generate:hover
+{
+    background-color: #c23d16;
+}
+
+.generate:active
+{
+    background-color: $brown;
+    box-shadow: 0 5px rgba(0,0,0,0.5);
+    transform: translate(5px);
+}
+.holder
+{
+    font-size: $m-size;
+}
+
+.warning
+{
+    font-size: $s-size;
+    padding-left: 4px;
+    background:white;
+    border: none;
+    padding-top:none;
+    margin: 0px;
+}
+
