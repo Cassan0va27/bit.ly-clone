@@ -57,8 +57,8 @@ class Dashboard extends React.Component
         let identifier=this.props.location.state.email.concat(this.props.location.state.password); 
         let safe=[];
         safe=localStorage.getItem(identifier);
-        safe=JSON.parse(safe);
         console.log(safe);
+        safe=JSON.parse(safe);
         let done=[];
        
         if( localStorage.getItem(identifier) === null)
