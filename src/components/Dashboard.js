@@ -96,6 +96,7 @@ class Dashboard extends React.Component
         if( localStorage.getItem(identifier) === null)
         {
             op=JSON.stringify(op);
+            console.log(op);
             localStorage.setItem(identifier,op);
             this.forceUpdate();
         }
@@ -104,6 +105,7 @@ class Dashboard extends React.Component
         {
             let io;
             io=localStorage.getItem(identifier);
+            console.log(io);
             io=io.slice(0, io.length-1);
             output=JSON.stringify(output);
             let js=',' + output + ']';
