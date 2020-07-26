@@ -58,6 +58,7 @@ class Dashboard extends React.Component
         let safe=[];
         safe=localStorage.getItem(identifier);
         safe=JSON.parse(safe);
+        console.log(safe);
         let done=[];
        
         if( localStorage.getItem(identifier) === null)
@@ -68,7 +69,7 @@ class Dashboard extends React.Component
         {
              for(let i=0;i<safe.length;i++)
             {
-                done[i]=<h3> Original Link: {safe[i].main}    --->  Generated Links -> {''+safe[i].sub+ ';'} </h3>   
+                done[i]=<h3> Original Link: {safe[i].main}    --->  Generated Links -> {safe[i].sub} </h3>   
             }
 
             return done;
