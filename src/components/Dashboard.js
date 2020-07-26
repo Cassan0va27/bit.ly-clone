@@ -2,23 +2,6 @@ import React from 'react';
 import {v4 as uuid} from 'uuid';
 
 
-// const Converter= (props) =>
-// {
-//     let main_link=props.mlink;
-//     let email=props.email;
-//     let password=props.password;
-//     //LOGIC HERE
-
-
-
-//     return(
-//         <div className="holder">
-//             <h1>{main_link}</h1>
-//             <p>{email}</p>
-//             <p>{password}</p>
-//         </div>
-//     );
-// }
 
 class Dashboard extends React.Component
 { 
@@ -57,7 +40,6 @@ class Dashboard extends React.Component
         let identifier=this.props.location.state.email.concat(this.props.location.state.password); 
         let safe=[];
         safe=localStorage.getItem(identifier);
-        console.log(safe);
         safe=JSON.parse(safe);
         let done=[];
        
@@ -69,7 +51,7 @@ class Dashboard extends React.Component
         {
              for(let i=0;i<safe.length;i++)
             {
-                done[i]=<h3> Original Link: {safe[i].main}    --->  Generated Links -> {safe[i].sub} </h3>   
+                done[i]=<h3> <i className='gen'>Original Link: </i> {safe[i].main}    --->  <i className='gen'>Generated Links </i>-> {safe[i].sub + ','} </h3>   
             }
 
             return done;
@@ -93,25 +75,24 @@ class Dashboard extends React.Component
         let output={main: main_link, sub: sublinks};
         let op=[];
         op.push(output);
-        if( localStorage.getItem(identifier) === null)
-        {
-            op=JSON.stringify(op);
-            console.log(op);
-            localStorage.setItem(identifier,op);
-            this.forceUpdate();
-        }
-
-        else
+        if(localStorage.getItem(identifier) != null)
         {
             let io;
             io=localStorage.getItem(identifier);
-            console.log(io);
             io=io.slice(0, io.length-1);
             output=JSON.stringify(output);
             let js=',' + output + ']';
             let finale=io+js;
             localStorage.setItem(identifier,finale);
         }
+        else if( localStorage.getItem(identifier) === null)
+        {
+            op=JSON.stringify(op);
+            localStorage.setItem(identifier,op);
+            this.forceUpdate();
+        }
+
+       
 
       //this.displayContent();
       

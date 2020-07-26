@@ -62,7 +62,8 @@ class Homepage extends React.Component
 
     validatorCreate()
     {
-        const validator=this.state.email.concat(this.state.password);
+        let validator=this.state.email.concat(this.state.password);
+        validator=validator+'login';
         return validator;
     }
     render()

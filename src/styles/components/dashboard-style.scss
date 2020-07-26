@@ -44,6 +44,7 @@
     padding-right: 20px;
     width: 38rem;
     height: $xl-size;
+    font-weight: 600;
     font-size: $m-size;
 }
 .generate
@@ -72,6 +73,11 @@
     background-color: $brown;
     box-shadow: 0 5px rgba(0,0,0,0.5);
     transform: translate(5px);
+}
+
+.gen
+{
+    color: $orange;
 }
 .holder
 {
